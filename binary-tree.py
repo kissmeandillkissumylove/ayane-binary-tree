@@ -36,7 +36,7 @@ class BinaryTree:
 			for node in nodes:
 				if node:
 					if node == "S":
-						print(" " * (height//2), " ", end=" " * height)
+						print(end=" ")
 					else:
 						print(" "*height, node.data, end=" "*height)
 				else:
@@ -61,9 +61,14 @@ class BinaryTree:
 
 def main():
 	tree = BinaryTree()
-	add_elt = [random.randint(10, 100) for elt in range(0, 101)]
-	for elt in add_elt:
-		tree.add(elt)
+	add_elt = [20, 12, 15, 8, 23, 45, 24, 61, 32, 4, 1, 0, 43, 38, 9, 7, 18, 99, 69]
+	if add_elt:
+		for elt in add_elt:
+			tree.add(elt)
+	else:
+		add_elt = [random.randint(10, 100) for elt in range(0, 101)]
+		for elt in add_elt:
+			tree.add(elt)
 	tree.out()
 
 if __name__ == "__main__":
